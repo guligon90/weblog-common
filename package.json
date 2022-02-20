@@ -1,6 +1,6 @@
 {
-  "name": "@weeblog/weeblog-common",
-  "version": "0.0.3",
+  "name": "@weblogapp/weblogapp-common",
+  "version": "0.0.4",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -10,6 +10,7 @@
   "scripts": {
     "build": "yarn clean && tsc",
     "clean": "del ./build/*",
+    "doctoc": "doctoc ./README.md --github",
     "pub": "yarn version --patch && yarn build && yarn publish"
   },
   "publishConfig": {
@@ -21,6 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "del-cli": "^4.0.0",
+    "doctoc": "^2.1.0",
     "typescript": "^4.3.2"
   },
   "dependencies": {
