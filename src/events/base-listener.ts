@@ -1,6 +1,6 @@
 import { Message, Stan } from 'node-nats-streaming';
 import { Subjects } from './subjects';
-import Logger from '../logger';
+import { Logger } from '../logger';
 
 const logger = Logger(__filename);
 

@@ -1,7 +1,7 @@
 'use strict';
 import * as winston from 'winston';
 
-const levels = {
+export const levels = {
   error: 0,
   warn: 1,
   info: 2,
@@ -9,14 +9,14 @@ const levels = {
   debug: 4,
 };
 
-const level = (): string => {
+export const level = (): string => {
   const env = process.env.NODE_ENV || 'development';
   const isDevelopment = env === 'development';
 
   return isDevelopment ? 'debug' : 'warn';
 };
 
-const colors = {
+export const colors = {
   error: 'red',
   warn: 'yellow',
   info: 'green',
@@ -26,7 +26,7 @@ const colors = {
 
 winston.addColors(colors);
 
-const Logger = (moduleName: string): winston.Logger => {
+export const Logger = (moduleName: string): winston.Logger => {
   const format = winston.format.combine(
     winston.format.label({ label: moduleName }),
     winston.format.colorize({ all: true }),
@@ -50,5 +50,3 @@ const Logger = (moduleName: string): winston.Logger => {
     transports,
   });
 };
-
-export default Logger;
