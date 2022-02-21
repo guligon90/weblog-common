@@ -17,7 +17,14 @@ export * from './middlewares/validate-request';
 export * from './events/base-listener';
 export * from './events/base-publisher';
 export * from './events/subjects';
-export * from './events/post-created-event';
-export * from './events/post-updated-event';
-export * from './events/types/comment-status';
-export * from './events/types/post-status';
+export * from './events/posts/post-approved-event';
+export * from './events/posts/post-created-event';
+export * from './events/posts/post-rejected-event';
+export * from './events/posts/post-updated-event';
+export * from './events/comments/comment-approved-event';
+export * from './events/comments/comment-created-event';
+export * from './events/comments/comment-rejected-event';
+export * from './events/comments/comment-updated-event';
+
+export * from './events/status/comment-status';
+export * from './events/status/post-status';
