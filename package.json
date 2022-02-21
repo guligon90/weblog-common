@@ -1,6 +1,6 @@
 {
   "name": "@weblogapp/weblogapp-common",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -16,7 +16,7 @@
     "lint:fix": "eslint . --ext .cjs,.js,.ts --fix",
     "pre-commit": "lint-staged",
     "prettier": "prettier --config .prettierrc.cjs '**/*.{js,ts,tsx,json,css,scss,md}' --write",
-    "pub": "yarn version --patch && yarn build && yarn publish"
+    "pub": "yarn version --patch && yarn build && yarn publish --new-version 0.0.18"
   },
   "publishConfig": {
     "access": "public",
