@@ -1,4 +1,4 @@
-export declare enum PostStatus {
+export enum PostStatus {
   Approved = 'approved',
   Created = 'created',
   PendingReview = 'pending:review',
