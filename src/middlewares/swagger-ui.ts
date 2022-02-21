@@ -4,6 +4,7 @@ import { RequestHandler } from 'express';
 
 interface IAPIDocsServer {
   url: string;
+  description?: string;
 }
 
 type TAPIDocsHandler = Array<RequestHandler[] | RequestHandler>;

@@ -1,6 +1,4 @@
 // Re-export stuff from local modules
-export * from './api-docs';
-
 export * from './errors/bad-request-error';
 export * from './errors/custom-error';
 export * from './errors/database-connection-error';
@@ -13,6 +11,7 @@ export * from './logger';
 export * from './middlewares/current-user';
 export * from './middlewares/error-handler';
 export * from './middlewares/require-auth';
+export * from './middlewares/swagger-ui';
 export * from './middlewares/validate-request';
 
 export * from './events/base-listener';
