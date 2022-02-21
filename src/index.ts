@@ -19,3 +19,5 @@ export * from './events/base-publisher';
 export * from './events/subjects';
 export * from './events/post-created-event';
 export * from './events/post-updated-event';
+export * from './events/types/comment-status';
+export * from './events/types/post-status';
