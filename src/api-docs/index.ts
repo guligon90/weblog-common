@@ -6,18 +6,15 @@ interface IAPIDocsServer {
   url: string;
 }
 
-type TAPIDocsHandler = Array<string | RequestHandler[] | RequestHandler>;
+type TAPIDocsHandler = Array<RequestHandler[] | RequestHandler>;
 
-type TAPIDocsServers = IAPIDocsServer[];
-
-const apiDocsHandler = (
-  openApiVersion = '3.0.0',
-  route = 'api-docs',
+const buildApiDocsHandlers = (
   title: string,
   apiVersion: string,
   description: string,
-  servers: TAPIDocsServers,
+  servers: IAPIDocsServer[],
   apiModules: string[],
+  openApiVersion = '3.0.0',
 ): TAPIDocsHandler => {
   const options = {
     definition: {
@@ -34,7 +31,7 @@ const apiDocsHandler = (
 
   const specs = swaggerJSDoc(options);
 
-  return [route, swaggerUI.serve, swaggerUI.setup(specs)];
+  return [swaggerUI.serve, swaggerUI.setup(specs)];
 };
 
-export { apiDocsHandler, IAPIDocsServer, TAPIDocsHandler, TAPIDocsServers };
+export { buildApiDocsHandlers, IAPIDocsServer, TAPIDocsHandler };
